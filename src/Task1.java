@@ -63,7 +63,7 @@ public class Task1 {
             System.out.println("Error reading data from file: " + e.getMessage());
         }
 
-        try(BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\2 курс\\Java\\letter.txt"))){
+        try(BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\2 курс\\Java\\lab4_task1\\letter.txt"))){
             for(String line : letters){
                 writer.write(line + " ");
             }
