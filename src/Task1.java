@@ -4,9 +4,6 @@ public class Task1 {
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
 
-        Scanner file = null;
-        PrintWriter noNumber = null;
-        PrintWriter sortedNumberOutput = null;
         String inputPath = null;
 
         while (inputPath == null || !new File(inputPath).isFile()){
