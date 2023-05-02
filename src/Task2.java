@@ -28,11 +28,16 @@ public class Task2 {
         try (BufferedReader reader = new BufferedReader(new FileReader(inputPath))){
             String line;
             System.out.println("Result: ");
-            while ((line = reader.readLine()) != null){
-                String[] words = line.split(" ");
-                for (String word : words){
-                    System.out.print(word);
+            try(BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\2 курс\\Java\\lab4_task2\\result.txt"))){
+                while ((line = reader.readLine()) != null){
+                    String[] words = line.split(" ");
+                    for (String word : words){
+                        System.out.print(word);
+                        writer.write(word);
+                    }
                 }
+            }catch (IOException e){
+                System.out.println("Error reading data from file: " + e.getMessage());
             }
         } catch (IOException e){
             System.out.println("Error reading data from file: " + e.getMessage());
